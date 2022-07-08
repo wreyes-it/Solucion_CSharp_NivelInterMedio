@@ -41,6 +41,10 @@ namespace Presentacion
         {
             this.Listado_ca("%");
         }
-    
+
+        private void Btn_buscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
