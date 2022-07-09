@@ -159,7 +159,7 @@
             this.Btn_buscar.Name = "Btn_buscar";
             this.Btn_buscar.Size = new System.Drawing.Size(114, 23);
             this.Btn_buscar.TabIndex = 12;
-            this.Btn_buscar.Text = "Buscar texto";
+            this.Btn_buscar.Text = "Buscar";
             this.Btn_buscar.UseVisualStyleBackColor = true;
             this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
