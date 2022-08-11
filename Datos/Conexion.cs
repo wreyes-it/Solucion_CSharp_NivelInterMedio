@@ -17,10 +17,12 @@ namespace Datos
 
         private Conexion()
         {
+            /// Defino el Servidor de Datos (local o remoto)
+
             this.Base = "MiBaseDatos";
             this.Servidor = "SERVIDOR";
-            this.Usuario = "sa";
-            this.Clave = "user";
+            this.Usuario = "user_sistema";
+            this.Clave = "soporte";
         }
 
         public SqlConnection CrearConexion()
@@ -28,7 +30,7 @@ namespace Datos
             SqlConnection Cadena = new SqlConnection();
             try
             {
-Cadena.ConnectionString = "Server=" + this.Servidor + "; Database= "+this.Base+"; User Id="+this.Usuario+"; Password="+this.Clave;
+                Cadena.ConnectionString = "Server=" + this.Servidor + "; Database= "+this.Base+"; User Id="+this.Usuario+"; Password="+this.Clave;
             }
             catch (Exception ex)
             {
