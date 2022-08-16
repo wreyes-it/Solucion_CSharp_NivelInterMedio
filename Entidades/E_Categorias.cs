@@ -10,6 +10,7 @@ namespace Entidades
     // se lo hace public para que sea consumido por otra capa
     public class E_Categorias
     {
+        // Pueda recibir 
         public int Codigo_ca { get; set; }
         public string Descripcion_ca { get; set; }
     }

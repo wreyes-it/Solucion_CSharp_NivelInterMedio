@@ -41,6 +41,8 @@ namespace Datos
             return Cadena;
         }
 
+        /// Evalue la forma de conexion
+
         public static Conexion GetInstancia()
         {
             if (Con == null)

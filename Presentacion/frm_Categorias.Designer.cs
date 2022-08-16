@@ -30,7 +30,7 @@
         {
             this.Dgv_principal = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.Txt_Descripcion_ca = new System.Windows.Forms.TextBox();
+            this.Txt_descripcion_ca = new System.Windows.Forms.TextBox();
             this.Btn_cancelar = new System.Windows.Forms.Button();
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Btn_nuevo = new System.Windows.Forms.Button();
@@ -55,7 +55,7 @@
             this.Dgv_principal.ReadOnly = true;
             this.Dgv_principal.RowHeadersWidth = 51;
             this.Dgv_principal.RowTemplate.Height = 24;
-            this.Dgv_principal.Size = new System.Drawing.Size(448, 164);
+            this.Dgv_principal.Size = new System.Drawing.Size(504, 198);
             this.Dgv_principal.TabIndex = 0;
             // 
             // label1
@@ -67,15 +67,17 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Categoría";
             // 
-            // Txt_Descripcion_ca
+            // Txt_descripcion_ca
             // 
-            this.Txt_Descripcion_ca.Location = new System.Drawing.Point(122, 53);
-            this.Txt_Descripcion_ca.Name = "Txt_Descripcion_ca";
-            this.Txt_Descripcion_ca.Size = new System.Drawing.Size(153, 22);
-            this.Txt_Descripcion_ca.TabIndex = 2;
+            this.Txt_descripcion_ca.Enabled = false;
+            this.Txt_descripcion_ca.Location = new System.Drawing.Point(122, 53);
+            this.Txt_descripcion_ca.Name = "Txt_descripcion_ca";
+            this.Txt_descripcion_ca.Size = new System.Drawing.Size(153, 22);
+            this.Txt_descripcion_ca.TabIndex = 2;
             // 
             // Btn_cancelar
             // 
+            this.Btn_cancelar.Enabled = false;
             this.Btn_cancelar.Location = new System.Drawing.Point(72, 110);
             this.Btn_cancelar.Name = "Btn_cancelar";
             this.Btn_cancelar.Size = new System.Drawing.Size(75, 23);
@@ -85,25 +87,28 @@
             // 
             // Btn_guardar
             // 
+            this.Btn_guardar.Enabled = false;
             this.Btn_guardar.Location = new System.Drawing.Point(171, 110);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(75, 23);
             this.Btn_guardar.TabIndex = 4;
             this.Btn_guardar.Text = "Guardar";
             this.Btn_guardar.UseVisualStyleBackColor = true;
+            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
             // 
             // Btn_nuevo
             // 
-            this.Btn_nuevo.Location = new System.Drawing.Point(8, 231);
+            this.Btn_nuevo.Location = new System.Drawing.Point(6, 268);
             this.Btn_nuevo.Name = "Btn_nuevo";
             this.Btn_nuevo.Size = new System.Drawing.Size(88, 64);
             this.Btn_nuevo.TabIndex = 5;
             this.Btn_nuevo.Text = "Nuevo";
             this.Btn_nuevo.UseVisualStyleBackColor = true;
+            this.Btn_nuevo.Click += new System.EventHandler(this.Btn_nuevo_Click);
             // 
             // Btn_actualizar
             // 
-            this.Btn_actualizar.Location = new System.Drawing.Point(95, 231);
+            this.Btn_actualizar.Location = new System.Drawing.Point(93, 268);
             this.Btn_actualizar.Name = "Btn_actualizar";
             this.Btn_actualizar.Size = new System.Drawing.Size(88, 64);
             this.Btn_actualizar.TabIndex = 6;
@@ -112,7 +117,7 @@
             // 
             // Btn_eliminar
             // 
-            this.Btn_eliminar.Location = new System.Drawing.Point(182, 231);
+            this.Btn_eliminar.Location = new System.Drawing.Point(180, 268);
             this.Btn_eliminar.Name = "Btn_eliminar";
             this.Btn_eliminar.Size = new System.Drawing.Size(88, 64);
             this.Btn_eliminar.TabIndex = 7;
@@ -121,7 +126,7 @@
             // 
             // Btn_reporte
             // 
-            this.Btn_reporte.Location = new System.Drawing.Point(269, 231);
+            this.Btn_reporte.Location = new System.Drawing.Point(267, 268);
             this.Btn_reporte.Name = "Btn_reporte";
             this.Btn_reporte.Size = new System.Drawing.Size(88, 64);
             this.Btn_reporte.TabIndex = 8;
@@ -130,7 +135,7 @@
             // 
             // Btn_salir
             // 
-            this.Btn_salir.Location = new System.Drawing.Point(356, 231);
+            this.Btn_salir.Location = new System.Drawing.Point(354, 268);
             this.Btn_salir.Name = "Btn_salir";
             this.Btn_salir.Size = new System.Drawing.Size(88, 64);
             this.Btn_salir.TabIndex = 9;
@@ -155,7 +160,7 @@
             // 
             // Btn_buscar
             // 
-            this.Btn_buscar.Location = new System.Drawing.Point(604, 19);
+            this.Btn_buscar.Location = new System.Drawing.Point(602, 19);
             this.Btn_buscar.Name = "Btn_buscar";
             this.Btn_buscar.Size = new System.Drawing.Size(78, 23);
             this.Btn_buscar.TabIndex = 12;
@@ -167,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 311);
+            this.ClientSize = new System.Drawing.Size(852, 344);
             this.Controls.Add(this.Btn_buscar);
             this.Controls.Add(this.Txt_buscar);
             this.Controls.Add(this.label2);
@@ -178,7 +183,7 @@
             this.Controls.Add(this.Btn_nuevo);
             this.Controls.Add(this.Btn_guardar);
             this.Controls.Add(this.Btn_cancelar);
-            this.Controls.Add(this.Txt_Descripcion_ca);
+            this.Controls.Add(this.Txt_descripcion_ca);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Dgv_principal);
             this.Name = "frm_Categorias";
@@ -195,7 +200,7 @@
 
         private System.Windows.Forms.DataGridView Dgv_principal;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Txt_Descripcion_ca;
+        private System.Windows.Forms.TextBox Txt_descripcion_ca;
         private System.Windows.Forms.Button Btn_cancelar;
         private System.Windows.Forms.Button Btn_guardar;
         private System.Windows.Forms.Button Btn_nuevo;

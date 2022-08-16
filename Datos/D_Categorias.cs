@@ -5,16 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;              // needed for connect and retrieve information from Sql Server
 using System.Data.SqlClient;    // needed for connect and retrieve information from Sql Server
-using Entidades;
+using Entidades;                // needed for access Entidades Layer
 
 namespace Datos
 {
-    public class D_Categorias
+    public class D_Categorias           // needed public for sharing throught Layers
     {
         // Metodo para listar Categorias
         public DataTable Listar_ca(string cTexto)
         {
-            SqlDataReader Resultado;
+            SqlDataReader Resultado;    
             DataTable MiTabla = new DataTable();
             SqlConnection SqlCon = new SqlConnection();
             try
@@ -37,7 +37,7 @@ namespace Datos
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
         }
-    
+
         // Metodo para guardar Categorias
         public string Guardar_ca(int Opcion,E_Categorias oCa)
         {
@@ -63,8 +63,15 @@ namespace Datos
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return Rpta;
-
         }
-    
+
+        // Metodo para editar Categorias
+
+        // Metodo para Anular Categorias
+
+
+
+
     }
+
 }
